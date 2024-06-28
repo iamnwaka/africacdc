@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-Service Training: Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        #siteHeader {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-bottom: 20px;
+        }
+
+        #siteLogoWrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        #siteLogo {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        #siteHeaderContent {
+            margin-bottom: 10px;
+        }
+
+        #siteName {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        #siteTag {
+            font-style: italic;
+            margin-top: 0;
+        }
+
+        #inlineNavBar ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+
+        #inlineNavBar ul li {
+            margin-right: 10px;
+        }
+
+        #welcomeIntro {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #welcomeIntro img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            float: right;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        #welcomeIntro h1 {
+            font-size: 2rem;
+            margin-top: 0;
+        }
+
+        #welcomeIntro p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .loginTable {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-grow: 1; /* Ensure form takes remaining space */
+        }
+
+        .loginTable h2 {
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        .loginTable hr {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+
+        .forgot {
+            font-size: 0.9rem;
+            float: right;
+        }
+
+        .btn-primary {
+            background-color: #4CAF50;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            display: block;
+            margin-top: 20px; /* Added margin */
+        }
+
+        .btn-primary:hover {
+            background-color: #45a049;
+        }
+
+        #siteFooter {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0; /* Increased padding top and bottom */
+            width: 100%;
+        }
+    </style>
+</head>
+<body id="loginPage">
+
+<header id="siteHeader">
+    <div id="siteLogoWrap">
+        <img src="images/au.png" alt="Logo 1" id="siteLogo">
+        <img src="images/acdc.png" alt="Logo 2" id="siteLogo">
+    </div>
+    <div id="siteHeaderContent">
+        <p id="siteName">Africa CDC - In Service Training Management System</p>
+        <p id="siteTag">Training Information System</p>
+    </div>
+    <nav id="inlineNavBar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="http://www.capacityplus.org/hris/contact">Feedback</a></li>
+            <li><a href="http://www.capacityplus.org/hris/" target="_new">iHRIS Website</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+        <div id="welcomeIntro">
+            <img src="images/logos_aupic.jpeg" alt="moh complex (photo)">
+            <h1>Welcome</h1>
+            <p><strong>Train</strong> is a tool that enables an organization to track and manage In-service Trainings.</p>
+        </div>
+
+        <div id="siteContent">
+            <form id="form1" method="post" action="login">
+                <div class="loginTable">
+                    <h2>Please Log In</h2>
+                    <p style="font-size: 1rem;">Enter your username and password.</p>
+                    <hr>
+                    <div id="error_message"></div>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" class="form-control" id="username" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" id="password" name="password">
+                    </div>
+                    <input type="submit" value="Login" name="submit" class="btn btn-primary">
+                    <span class="forgot"><a href="forgot">Forgot username or password?</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer id="siteFooter">
+    <p>&copy; 2024 Africa CDC - In Service Training Management System. All rights reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
