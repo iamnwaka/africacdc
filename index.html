@@ -7,45 +7,49 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Africa CDC Systems and Dashboards</h1>
+            <p class="lead">A one-stop center for finding systems and dashboards within Africa CDC</p>
+        </div>
+    </header>
+
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="images/au.png" alt="Logo 1" class="d-inline-block align-top" height="40">
-                <img src="images/acdc.png" alt="Logo 2" class="d-inline-block align-top" height="40">
+                <img src="images/au.png" alt="Logo 1" height="40">
+                <span class="mx-2">Africa CDC</span>
+                <img src="images/acdc.png" alt="Logo 2" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">
-                            <i class="fas fa-sign-in-alt"></i> Login
-                        </a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
                 </ul>
             </div>
-            
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="jumbotron jumbotron-fluid text-center text-white hero-overlay">
+    <section class="hero-section text-center text-white py-5" style="background: url('../images/hero-bg.jpeg') no-repeat center center; background-size: cover;">
         <div class="container">
-            <h1 class="display-4 animate__animated animate__fadeInDown">Welcome to the Africa CDC Systems and Dashboards</h1>
-            <p class="lead animate__animated animate__fadeInUp">A one-stop center for finding systems and dashboards within Africa CDC.</p>
+            <h1 class="display-4">Welcome to Africa CDC</h1>
+            <p class="lead">Empowering Africa to respond to public health emergencies</p>
         </div>
-    </header>
+    </section>
 
     <!-- Sections -->
     <section id="sections" class="py-5">
         <div class="container">
             <div class="row">
+                <!-- Section Cards -->
                 <div class="col-md-4 mb-4" data-aos="fade-up">
                     <div class="card shadow-sm h-100">
                         <div class="card-body text-center">
